@@ -1,0 +1,88 @@
+@use '../SASS/Main' as* ;
+
+.main{
+    @include size(100% , calc(100dvh - 80px));
+    background-color: var(--bg);
+    @include flex(center, center);
+}
+.inform{
+    @include size(100% , calc(100dvh - 80px));
+    @include flex-col(center, start);
+    gap: 10px;
+}
+.avatar{
+    @include size(100% , calc(100dvh - 80px));
+    @include flex(center, center);
+}
+.avatar .img{
+    animation: upDown 5s ease-in-out  infinite forwards;
+}
+.main h1{
+    color: $teal-5;
+}
+
+.main h2{
+    color: var(--text);
+}
+.main p{
+    color: var(--text);
+    width: 80%;
+    line-height: 25px;
+    font-size: 16px;
+
+    @include screen(lg){
+        width: 100%;
+    }
+}
+
+.media{
+    @include flex(center, center);
+    gap: 10px;
+}
+.icon{
+    @include circle(20px);
+    padding: 10px;
+    border-color: $teal-5;
+    color:  $teal-5;
+    transition: 0.3s;
+    &:hover{
+        color: $slate-8;
+        background-color: $teal-5;
+        box-shadow: 1px 1px 10px $teal-5 , -1px -1px 10px $teal-5;
+    }
+}
+
+
+@keyframes upDown{
+    0%{
+        transform: translateY(0px);
+    }   
+    50%{
+        transform: translateY(20px);
+    }  
+    100%{
+        transform: translateY(0px);
+    }  
+}
+
+.btns{
+    @include flex(center, center);
+    gap: 10px;
+}
+.btn{
+    @include size(150px , 50px);
+    border: 1px solid $teal-5 ;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn1{
+    @extend .btn;
+    color: white;
+    @include bg-clr-left($teal-5, $slate-8);
+}
+.btn2{
+    @extend .btn;
+    color: $teal-5;
+    @include bg-clr-left($slate-8, $teal-5);
+}
