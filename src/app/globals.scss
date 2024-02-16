@@ -68,6 +68,9 @@ body {
   .container {
     margin: 0 auto;
     width: 80%;
+    @include flex-col(start, space-between);
+    overflow: hidden;
+    height: 100dvh;
   }
 }
 /*========================

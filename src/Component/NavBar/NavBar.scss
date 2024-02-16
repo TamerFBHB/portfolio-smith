@@ -15,7 +15,7 @@
     }
 }
 
-.nav ul{
+.nav .links{
     position: relative;
     @include flex(space-between , center);
 
@@ -35,15 +35,14 @@
 .nav  a{
     text-transform: capitalize;
     font-size: 18px;
-    color: var(--text);
     transition: 0.3s;
-
     &:hover{
         color: $teal-5;
     }
 }
 .nav .logo a{
     font-size: 40px;
+    color: var(--text);
 }
 
 @media (max-width:600px) {
@@ -55,4 +54,10 @@
         transform: translateX(150px);
         opacity: 0;
     }
+}
+.active{
+    color: $teal-5;
+}
+.nonActive{
+    color: var(--text);
 }

@@ -1,7 +1,7 @@
 @use '../SASS/Main' as* ;
 
 .main{
-    @include size(100% , calc(100dvh - 80px));
+    @include size(100% , 100%);
     background-color: var(--bg);
     @include flex(center, center);
 
@@ -10,29 +10,29 @@
     }
 }
 .inform{
-    @include size(50% , calc(100dvh - 80px));
+    @include size(50% ,  100%);
     @include flex-col(center, start);
     gap: 15px;
 
     @include screen(lg){
-        @include size(100% , 40dvh);
+        @include size(100% , 40%);
         @include flex-col(center, center);
         gap: 5px;
     }
 
     @include screen(sm){
-        @include size(100% , 50dvh);
+        @include size(100% , 50%);
     }
 }
 .ContainerAvatar{
-    @include size(50% , calc(100dvh - 80px));
+    @include size(50% ,  100%);
     @include flex(center, center);
 
     @include screen(lg){
-        @include size(100% , 60dvh);
+        @include size(100% , 60%);
     }
     @include screen(sm){
-        @include size(100% , 60dvh);
+        @include size(100% , 60%);
     }
 
 }
