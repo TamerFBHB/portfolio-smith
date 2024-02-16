@@ -4,34 +4,90 @@
     @include size(100% , calc(100dvh - 80px));
     background-color: var(--bg);
     @include flex(center, center);
+
+    @include screen(lg){
+        flex-direction: column-reverse; 
+    }
 }
 .inform{
-    @include size(100% , calc(100dvh - 80px));
+    @include size(50% , calc(100dvh - 80px));
     @include flex-col(center, start);
-    gap: 10px;
+    gap: 15px;
+
+    @include screen(lg){
+        @include size(100% , 40dvh);
+        @include flex-col(center, center);
+        gap: 5px;
+    }
+
+    @include screen(sm){
+        @include size(100% , 50dvh);
+    }
 }
-.avatar{
-    @include size(100% , calc(100dvh - 80px));
+.ContainerAvatar{
+    @include size(50% , calc(100dvh - 80px));
     @include flex(center, center);
+
+    @include screen(lg){
+        @include size(100% , 60dvh);
+    }
+    @include screen(sm){
+        @include size(100% , 60dvh);
+    }
+
+}
+.ContainerAvatar .avatar{
+    position: relative;
+    @include size(400px , 600px);
+    opacity: 0;
+    @include animation-time(FadeIn,1s,4s );
+
+    @include screen(lg){
+        @include size(250px , 350px);
+    }
+
 }
 .avatar .img{
     animation: upDown 5s ease-in-out  infinite forwards;
 }
+
+
 .main h1{
     color: $teal-5;
+    @include animation(FromTop );
+
+    @include screen(sm){
+        font-size: 25px;
+    }
 }
 
 .main h2{
     color: var(--text);
+    @include animation-time(FromTop,0.5s,0.5s );
+    opacity: 0;
+
+    @include screen(sm){
+        font-size: 20px;
+    }
 }
 .main p{
     color: var(--text);
     width: 80%;
     line-height: 25px;
     font-size: 16px;
+    @include animation-time(FadeIn,0.5s,1s );
+    opacity: 0 ;
 
     @include screen(lg){
-        width: 100%;
+        width: 80%;
+        text-align: center;
+    }
+
+    @include screen(sm){
+        width: 90%;
+        text-align: center;
+        line-height: 18px;
+        font-size: 14px;
     }
 }
 
@@ -51,7 +107,18 @@
         box-shadow: 1px 1px 10px $teal-5 , -1px -1px 10px $teal-5;
     }
 }
-
+.facebook{
+    @include animation-time(zoomIn,0.5s,1.5s );
+    opacity: 0 ;
+}
+.insta{
+    @include animation-time(zoomIn,0.5s,2s );
+    opacity: 0 ;
+}
+.tweet{
+    @include animation-time(zoomIn,0.5s,2.5s );
+    opacity: 0 ;
+}
 
 @keyframes upDown{
     0%{
@@ -80,9 +147,13 @@
     @extend .btn;
     color: white;
     @include bg-clr-left($teal-5, $slate-8);
+    @include animation-time(zoomIn,0.5s,3s );
+    opacity: 0 ;
 }
 .btn2{
     @extend .btn;
     color: $teal-5;
     @include bg-clr-left($slate-8, $teal-5);
+    @include animation-time(zoomIn,0.5s,3.5s );
+    opacity: 0 ;
 }

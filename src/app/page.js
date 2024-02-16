@@ -11,19 +11,21 @@ export default function Home() {
         <h2>Photographer</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse obcaecati et quibusdam. Eum ea consectetur, aperiam explicabo a omnis, odio excepturi sint iusto quia vitae. Voluptates, natus. Accusantium harum nobis, laudantium nam praesentium voluptatem pariatur porro suscipit iure, dolor amet?</p>
         <div className={styles.media}>
-            <FaFacebookF className={styles.icon}/>
-            <FaInstagramSquare className={styles.icon}/>
-            <FaXTwitter className={styles.icon}/>
+          <FaFacebookF className={`${styles.icon} ${styles.facebook}`} />
+          <FaInstagramSquare className={`${styles.icon} ${styles.insta}`} />
+          <FaXTwitter className={`${styles.icon} ${styles.tweet}`} />
         </div>
         <div className={styles.btns}>
           <button className={styles.btn1}>Download C.V</button>
           <button className={styles.btn2}>let's talk</button>
         </div>
       </div>
-      
-      <div className={styles.avatar}>
-          <Image src="/Untitled.png" alt="avatar" loading="lazy" width={350} height={550} className={styles.img} />
+
+      <div className={styles.ContainerAvatar}>
+        <div className={styles.avatar}>
+          <Image src="/Untitled.png" alt="avatar" loading="lazy" fill className={styles.img} />
         </div>
+      </div>
     </main>
   );
 }

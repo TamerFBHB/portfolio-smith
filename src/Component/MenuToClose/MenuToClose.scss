@@ -1,0 +1,54 @@
+@use "../../SASS/Main"  as *;
+
+%closeBar{
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  .barToclose{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 40px;
+    overflow: hidden;
+    display: none;
+
+    @include screen(sm){
+      display: block;
+      z-index: 100;
+    }
+  }
+  .content{
+    @extend %closeBar;
+    inset: 29px -10px 8px;
+  }
+  .barToclose::after{
+  @extend %closeBar;
+  inset: 18.5px -10px;
+  }
+  
+  .barToclose::before{
+    @extend %closeBar;    
+    inset: 8px -10px 29px;
+    z-index: 2;
+  }
+
+  .ameen .content{
+    display: none;
+  }
+  .ameen{
+    width: 20px;
+    height: 40px;
+  }
+  .ameen::after{
+    transform: rotate(45deg);
+    background-color: red;
+  }
+  .ameen::before{
+    inset: 18.5px -10px;
+    transform: rotate(135deg);
+    background-color: red;
+  }

@@ -4,10 +4,33 @@
     @include size(100% , 80px);
     @include flex(space-between , center);
     background-color: var(--bg);
+
+    @include screen(lg){
+        @include size(100% , 100px);
+        @include flex-col(center , center);
+    }
+
+    @include screen(sm){
+        @include size(100% , 50px);
+    }
 }
 
 .nav ul{
+    position: relative;
     @include flex(space-between , center);
+
+    @include screen(sm){
+        position: fixed;
+        right: 0;
+        top: 80px;
+        @include size(150px , 80%);
+        @include flex-col(center , center);
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 150px;
+        @include blur-bg(var(--sidBar-bg));
+        transition: 0.5s;
+        z-index: 10;
+    }
 }
 .nav  a{
     text-transform: capitalize;
@@ -19,6 +42,17 @@
         color: $teal-5;
     }
 }
-.nav .logo{
+.nav .logo a{
     font-size: 40px;
+}
+
+@media (max-width:600px) {
+    .see{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .hide{
+        transform: translateX(150px);
+        opacity: 0;
+    }
 }
