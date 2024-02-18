@@ -45,7 +45,9 @@
     @include screen(lg){
         @include size(250px , 350px);
     }
-
+    @include screen(sm){
+        @include size(150px , 250px);
+    }
 }
 .avatar .img{
     animation: upDown 5s ease-in-out  infinite forwards;
