@@ -4,6 +4,7 @@ import styles from './collection.module.scss'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import Link from 'next/link';
+import { AnimatePresence, motion } from "framer-motion"
 
 
 export default function Collection() {
@@ -61,18 +62,22 @@ export default function Collection() {
                 <button className={styles.btn2} onClick={() => setChange(0)} >normal</button>
             </div>
             <div className={styles.main} >
-
                 <div className={change === 1 ? styles.gallery : styles.containerImage}>
                     {error == null ? (post.map((item) => {
                         return (
+                            <AnimatePresence>
+                                <Link href={item.src.original} target='_blank' className={styles.btn1} >
+                                    <motion.div
+                                        layout
+                                        transition={{ type: "spring", damping: 8, stiffness: 50 }}
+                                        className={styles.boxImage} key={item}>
+                                        <Image src={item.src.large} alt="Brown Rocks During Golden Hour"
+                                            width={280} height={item.height / item.width * 280}
+                                            className={styles.img} loading="lazy" />
+                                    </motion.div>
+                                </Link>
 
-                            <Link href={item.src.original} target='_blank' className={styles.btn1} >
-                                <div className={styles.boxImage} key={item}>
-                                    <Image src={item.src.large} alt="Brown Rocks During Golden Hour"
-                                        width={280} height={item.height / item.width * 280}
-                                        className={styles.img} loading="lazy" />
-                                </div>
-                            </Link>
+                            </AnimatePresence>
                         )
                     })) : <h1>{error}</h1>}
                 </div>
