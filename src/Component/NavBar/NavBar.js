@@ -40,7 +40,7 @@ export default function NavBar() {
                 <CustomLink href="/" title="Home" />
                 <CustomLink href="/about" title="About" />
                 <CustomLink href="/collection" title="Collection" />
-                <CustomLink href="/Contact" title="Contact Me" />
+                <CustomLink href="/conection" title="Contact Me" />
 
                 <DarkMode />
             </div>

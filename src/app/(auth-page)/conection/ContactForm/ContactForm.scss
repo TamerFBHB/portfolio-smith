@@ -1,0 +1,106 @@
+@use "../../../../SASS/Main" as * ;
+
+.sendEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.sendEmail div {
+  margin: 15px 0;
+  @include size(100% , 100%);
+}
+.sendEmail h3 {
+  font-size: 30px;
+  color: var(--text);
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  padding: 15px 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.497);
+  box-shadow: 0px 3px 5px $gray-5;
+  background-color: var(--bg);
+}
+.sendEmail div label {
+  margin-bottom: 5px;
+  display: block;
+  align-items: center;
+  color: var(--text);
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: start;
+}
+.sendEmail div input {
+  width: 450px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  color:var(--Title-contact);
+  background-color: var(--bg);
+  box-shadow: 0px 0px 1px  #fff;
+}
+.sendEmail div textarea {
+  width: 450px;
+  height: 150px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color:var(--text);
+  background-color: var(--bg);
+  box-shadow: 0px 0px 1px  #fff;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.sendEmail .send { 
+@include size(100% , 80px);
+@include flex(center , center);
+margin-bottom: 0;
+}
+
+.sendEmail .submit {
+  @include size(150px ,40px);  
+
+  background-image: linear-gradient(to right, #176ab7 0%, #113f67 51%, #176ab7 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-size: 200% auto;
+  transition: 0.5s;  
+
+	border-radius:8px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	&:hover {
+    background-position: right center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}
+
+form p:last-child{
+  @include flex(center , center);
+  gap: 10px;
+  color: var(--text);
+}
+
+
+@media (max-width: 768px) {
+  .sendEmail h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .sendEmail div input,
+  .sendEmail div textarea {
+    width: 250px;
+  }
+  .sendEmail div label {
+    font-size: 18px;
+  }
+}

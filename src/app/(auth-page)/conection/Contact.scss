@@ -1,0 +1,23 @@
+@use "../../../SASS/Main" as * ;
+
+.contact{
+    @include flex(center,center);
+    margin-top: 20px;
+}
+.animation{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    }
+.contactForm{
+    width: 50%;
+}
+@media screen and (max-width: 992px) {
+    .contactForm{
+        width: 100%;
+    }
+    .animation{
+    display: none;
+    }
+    
+}
