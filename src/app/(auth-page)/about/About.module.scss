@@ -95,7 +95,7 @@
         @include size(250px , 350px);
     }
     @include screen(sm){
-        @include size(150px , 250px);
+        @include size(200px , 300px);
     }
 }
 .avatar .img{
