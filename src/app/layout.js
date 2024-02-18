@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import { Playball } from "next/font/google";
 import "./globals.scss";
 import NavBar from "@/Component/NavBar/NavBar";
 import Footer from "@/Component/footer/page";
@@ -6,6 +7,10 @@ import Footer from "@/Component/footer/page";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700", "800", "900"]
+});
+const playball = Playball({
+  subsets: ["latin"],
+  weight: [ "400"]
 });
 
 export const metadata = {
