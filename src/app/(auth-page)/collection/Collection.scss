@@ -1,7 +1,0 @@
-@use '../../../SASS/Main' as* ;
-
-.main{
-    @include size(100% , 100%);
-    @include flex(center, center);
-    background-color: var(--bg);
-}

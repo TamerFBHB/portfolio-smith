@@ -11,7 +11,7 @@
     }
 
     @include screen(sm){
-        @include size(100% , 50px);
+        @include size(100% , 65px);
     }
 }
 
@@ -42,7 +42,7 @@
 }
 .nav .logo a{
     font-size: 40px;
-    color: var(--text);
+    @include text-gradient(right, 40px, red,yellow)
 }
 
 @media (max-width:600px) {

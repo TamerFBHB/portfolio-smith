@@ -13,7 +13,8 @@ export default function NavBar() {
     const CustomLink = ({ href, title }) => {
         const router = usePathname()
         return (
-            <Link href={href} className={`${router === href ? 'active' : 'nonActive'}`}>
+            <Link href={href} className={`${router === href ? 'active' : 'nonActive'}`}
+            onClick={toggleClose} >
                 {title}
             </Link>
         )
