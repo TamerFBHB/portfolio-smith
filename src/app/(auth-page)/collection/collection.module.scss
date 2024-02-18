@@ -11,6 +11,12 @@
     @include size(100%,50px);
     @include flex(center, center);
     margin-top: 10px;
+
+    @include screen(lg){
+        @include flex-col(center, center);
+        @include size(100%,150px);
+        gap: 10px
+    }
 }
 .inputSearch{
     @include size(450px,60px);
@@ -20,6 +26,10 @@
     border-radius: 8px;
     outline: 2px solid $teal-5;
     outline-offset: -8px;
+
+    @include screen(lg){
+        @include size(90%,60px);
+    }
 }
 
 

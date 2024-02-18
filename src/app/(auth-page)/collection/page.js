@@ -58,8 +58,10 @@ export default function Collection() {
                     onChange={(e) => setquery(e.target.value)}
                     value={query}
                 />
-                <button className={styles.btn2} onClick={() => setChange(1)} >Grid</button>
-                <button className={styles.btn2} onClick={() => setChange(0)} >normal</button>
+                <div className={styles.butns}>
+                    <button className={styles.btn2} onClick={() => setChange(1)} >Grid</button>
+                    <button className={styles.btn2} onClick={() => setChange(0)} >normal</button>
+                </div>
             </div>
             <div className={styles.main} >
                 <div className={change === 1 ? styles.gallery : styles.containerImage}>
@@ -86,3 +88,9 @@ export default function Collection() {
         </div >
     )
 };
+// const multer = require('multer');
+// const upload = multer({ dest: 'uploads/' }); // تحديد مجلد الوجهة
+
+// app.post('/upload', upload.single('file'), (req, res) => {
+//   // القيام بالمعالجة اللازمة للملف المرفوع هنا
+// });
