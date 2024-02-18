@@ -16,8 +16,8 @@ export default function Collection() {
     const [error, setError] = useState(null)
     // api from pexels site
     const API_KEY = 'PL4T8tXL53kgKi55zaurZpImX5s1UC0AyzFTqnoGXmuAI0wJvHxVOs13'
-
-    const [change , setChange] = useState(0)
+    // to change the layout 
+    const [change, setChange] = useState(0)
 
     const getPhotos = async () => {
 
@@ -62,17 +62,15 @@ export default function Collection() {
             </div>
             <div className={styles.main} >
 
-                <div className={change===1 ? styles.gallery : styles.containerImage}>
+                <div className={change === 1 ? styles.gallery : styles.containerImage}>
                     {error == null ? (post.map((item) => {
                         return (
 
                             <Link href={item.src.original} target='_blank' className={styles.btn1} >
-                                <div className={styles.boxImage } key={item}>
+                                <div className={styles.boxImage} key={item}>
                                     <Image src={item.src.large} alt="Brown Rocks During Golden Hour"
                                         width={280} height={item.height / item.width * 280}
                                         className={styles.img} loading="lazy" />
-                                    {/* <Link href={item.src.original} className={styles.btn1}>Download</Link>
-                                        <p>{item.photographer}</p> */}
                                 </div>
                             </Link>
                         )

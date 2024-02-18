@@ -69,7 +69,7 @@
     position: relative;
     @include size(400px , 600px);
     opacity: 0;
-    @include animation-time(FadeIn,1s,4s );
+    @include animation-time(FadeIn,1s,2s );
 
     @include screen(lg){
         @include size(250px , 350px);
