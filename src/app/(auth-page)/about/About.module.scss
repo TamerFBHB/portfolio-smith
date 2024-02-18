@@ -4,6 +4,10 @@
 .about{
     @include flex(center , center);
 
+    @include screen(lg){
+        @include flex-col(center , center);
+        flex-direction: column-reverse;
+    }
 }
 .inform{
     @include size(50% ,  100%);
@@ -23,8 +27,12 @@
 .inform h1{
     color: $teal-5;
     @include animation(FromTop );
-    font-size: 50px;
+    font-size: 60px;
 
+    @include screen(lg){
+        font-size: 40px;
+        text-align: center;
+    }
     @include screen(sm){
         font-size: 25px;
     }
