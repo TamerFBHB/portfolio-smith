@@ -1,7 +1,7 @@
 @use '../SASS/Main' as* ;
 
 .main{
-    @include size(100% , calc(100vh - 180px));
+    @include size(100% , calc(100dvh - 180px));
     background-color: var(--bg);
     @include flex(center, center);
 

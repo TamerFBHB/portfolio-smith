@@ -3,7 +3,7 @@
 
 .about{
     @include flex(center , center);
-    @include size(100% , calc(100vh - 180px));
+    @include size(100% , calc(100dvh - 180px));
 
     @include screen(lg){
         @include flex-col(center , center);
