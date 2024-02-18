@@ -4,6 +4,7 @@
     @include size(100% , 80px);
     @include flex(space-between , center);
     background-color: var(--bg);
+    z-index: 1000;
 
     @include screen(lg){
         @include size(100% , 100px);

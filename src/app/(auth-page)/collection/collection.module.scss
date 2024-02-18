@@ -2,8 +2,7 @@
 
 
 .main{
-    @include size(100% , 80dvh);
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin-top: 20px;
     display: flex;
     justify-content: center;

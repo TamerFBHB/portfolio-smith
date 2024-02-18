@@ -1,0 +1,10 @@
+@use "../../SASS/Main" as *;
+
+
+.footer{
+    @include flex(center,center);
+    @include size(100%,60px);
+    padding: 30px 0;
+    color: var(--text);
+    gap: 10px;
+}

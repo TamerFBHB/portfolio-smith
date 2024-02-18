@@ -2,6 +2,7 @@
 
 .contact{
     @include flex(center,center);
+    @include size(100% , calc(100vh - 190px));
     margin-top: 20px;
 }
 .animation{
