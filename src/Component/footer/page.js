@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <BsCCircle />
-            <p>2023 design by Tamer Fouad Boshara</p>
+            <p>Fabruary 2024 design by Tamer Fouad Boshara</p>
             <LogoT />
         </div>
     );
