@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 
 
 export default function NavBar() {
+
     const CustomLink = ({ href, title }) => {
         const router = usePathname()
         return (
@@ -20,8 +21,7 @@ export default function NavBar() {
         )
     }
 
-
-    const [show, setShow] = useState()
+    const [show, setShow] = useState(false)
     const toggleClose = () => {
         return setShow(prev => (prev ? false : true))
     }
