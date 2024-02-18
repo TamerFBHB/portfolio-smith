@@ -90,7 +90,6 @@
     }
 }
 .gallery {
-    @include size(100% , 80dvh);
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
