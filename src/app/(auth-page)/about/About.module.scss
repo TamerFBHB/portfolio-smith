@@ -30,13 +30,9 @@
     }
 }
 .inform p{
-    // color: var(--text);
-    @include text-gradient(bottom, 18px, $teal-4 , $red-4);
     width: 80%;
     line-height: 25px;
     font-size: 18px;
-    @include animation-time(FadeIn,0.5s,1s );
-    opacity: 0 ;
 
     @include screen(lg){
         width: 80%;
@@ -50,8 +46,23 @@
         font-size: 14px;
     }
 }
+    p .spaan{
+    color: transparent;
+    background-image: linear-gradient(90deg ,  $teal-4, $red-4 );
+    background-clip: text;
+    background-repeat: no-repeat;
 
-
+    animation: apeare 5s linear forwards;
+    }
+@keyframes apeare {
+    from{
+        
+    background-size: 0% , 100%;
+    }
+    to{
+        background-size: 100% , 100%;
+    }
+}
 
 .ContainerAvatar{
     @include size(50% ,  100%);

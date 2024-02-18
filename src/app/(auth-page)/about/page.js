@@ -6,7 +6,7 @@ export default function page() {
         <div className={styles.about}>
             <div className={styles.inform}>
                 <h1>Together let's discover the world</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse obcaecati et quibusdam. Eum ea consectetur, aperiam explicabo a omnis, odio excepturi sint iusto quia vitae. Voluptates, natus. Accusantium harum nobis, laudantium nam praesentium voluptatem pariatur porro suscipit iure, dolor amet?</p>
+                <p><span className={styles.spaan}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse obcaecati et quibusdam. Eum ea consectetur, aperiam explicabo a omnis, odio excepturi sint iusto quia vitae. Voluptates, natus. Accusantium harum nobis, laudantium nam praesentium voluptatem pariatur porro suscipit iure, dolor amet?</span></p>
         
             </div>
             <div className={styles.ContainerAvatar}>
