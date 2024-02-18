@@ -1,0 +1,81 @@
+@use '../../../SASS/Main' as * ;
+
+
+.about{
+    @include flex(center , center);
+
+}
+.inform{
+    @include size(50% ,  100%);
+    @include flex-col(center, start);
+    gap: 15px;
+
+    @include screen(lg){
+        @include size(100% , 40%);
+        @include flex-col(center, center);
+        gap: 5px;
+    }
+
+    @include screen(sm){
+        @include size(100% , 50%);
+    }
+}
+.inform h1{
+    color: $teal-5;
+    @include animation(FromTop );
+    font-size: 50px;
+
+    @include screen(sm){
+        font-size: 25px;
+    }
+}
+.inform p{
+    // color: var(--text);
+    @include text-gradient(bottom, 18px, $teal-4 , $red-4);
+    width: 80%;
+    line-height: 25px;
+    font-size: 18px;
+    @include animation-time(FadeIn,0.5s,1s );
+    opacity: 0 ;
+
+    @include screen(lg){
+        width: 80%;
+        text-align: center;
+    }
+
+    @include screen(sm){
+        width: 90%;
+        text-align: center;
+        line-height: 18px;
+        font-size: 14px;
+    }
+}
+
+
+
+.ContainerAvatar{
+    @include size(50% ,  100%);
+    @include flex(center, center);
+
+    @include screen(lg){
+        @include size(100% , 60%);
+    }
+    @include screen(sm){
+        @include size(100% , 60%);
+    }
+
+}
+.ContainerAvatar .avatar{
+    position: relative;
+    @include size(400px , 600px);
+    opacity: 0;
+    @include animation-time(FadeIn,1s,4s );
+
+    @include screen(lg){
+        @include size(250px , 350px);
+    }
+
+}
+.avatar .img{
+    animation: upDown 5s ease-in-out  infinite forwards;
+}
