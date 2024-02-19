@@ -94,14 +94,21 @@
     @include size(100% , 100%);
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 10px;
 }
 
 .gallery img {
     width: 100%; 
     height: 200px; 
-    object-fit: cover; 
     object-position: center; 
 }
-
+.gallery .cover{
+    object-fit:cover; 
+}
+.gallery .contain{
+    object-fit:contain;
+}
+.gallery .fill{
+    object-fit:fill;
+}

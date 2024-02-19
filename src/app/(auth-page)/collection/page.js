@@ -59,12 +59,14 @@ export default function Collection() {
                     value={query}
                 />
                 <div className={styles.butns}>
-                    <button className={styles.btn2} onClick={() => setChange(1)} >Grid</button>
                     <button className={styles.btn2} onClick={() => setChange(0)} >normal</button>
+                    <button className={styles.btn2} onClick={() => setChange(1)} >Cover</button>
+                    <button className={styles.btn2} onClick={() => setChange(2)} >fill</button>
+                    <button className={styles.btn2} onClick={() => setChange(3)} >contain</button>
                 </div>
             </div>
             <div className={styles.main} >
-                <div className={change === 1 ? styles.gallery : styles.containerImage}>
+                <div className={change === 1||change === 2 || change === 3 ? styles.gallery : styles.containerImage}>
                     {error == null ? (post.map((item) => {
                         return (
                             <AnimatePresence>
@@ -75,7 +77,8 @@ export default function Collection() {
                                         className={styles.boxImage} key={item}>
                                         <Image src={item.src.large} alt="Brown Rocks During Golden Hour"
                                             width={280} height={item.height / item.width * 280}
-                                            className={styles.img} loading="lazy" />
+                                            className={change ===1 ? styles.cover : change===2 ? styles.fill : change===3 ? styles.contain : styles.img}
+                                            loading="lazy" />
                                     </motion.div>
                                 </Link>
 
