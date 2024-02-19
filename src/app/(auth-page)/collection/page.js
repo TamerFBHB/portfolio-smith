@@ -91,9 +91,3 @@ export default function Collection() {
         </div >
     )
 };
-// const multer = require('multer');
-// const upload = multer({ dest: 'uploads/' }); // تحديد مجلد الوجهة
-
-// app.post('/upload', upload.single('file'), (req, res) => {
-//   // القيام بالمعالجة اللازمة للملف المرفوع هنا
-// });
